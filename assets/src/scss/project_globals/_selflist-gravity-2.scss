@@ -1,0 +1,102 @@
+/**
+ *
+ * STYLE: M GARAGE GRAVITY CONTACT FORM
+ *
+ */
+
+// GRAVITY CONTACT FORM FOR GARAGE SITE
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+#gform_wrapper_10 {
+  // border: 3px dotted yellow;
+  // background-color: #550606f2;
+
+  .validation_error {
+    color: white !important;
+  }
+  .gfield_description.validation_message {
+    color: white;
+  }
+
+  #gform_submit_button_10 {
+    margin: auto;
+    display: block;
+    padding: 1rem 4rem;
+    color: white;
+    background: transparent linear-gradient(180deg, #ad001b 0%, #57000e 100%) 0%
+      0% no-repeat padding-box;
+  }
+  input,
+  textarea,
+  select {
+    border-radius: 10px;
+    box-shadow: 0px 3px 30px #00000029;
+    background-color: lighten($color: #beadad, $amount: 10%);
+    color: black;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 1rem;
+
+    &:focus {
+      background-color: white;
+    }
+  }
+  select {
+    margin-top: 13px;
+    border: 1px solid darken($color: #e3e3e3, $amount: 17%);
+  }
+  #field_10_8,
+  #field_10_10 {
+    .gfield .gfield_error {
+      border: 1rem dotted yellow;
+    }
+    .gfield_label {
+      text-transform: uppercase;
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    // border: 3px dotted blue;
+    color: white;
+    .gfield_checkbox {
+      label {
+        font-family: 'Questrial', sans-serif;
+        margin-top: 0.3rem;
+        padding-left: 1rem;
+        font-size: 1rem;
+      }
+      input[type='checkbox'] {
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(2); /* IE */
+        -moz-transform: scale(2); /* FF */
+        -webkit-transform: scale(2); /* Safari and Chrome */
+        -o-transform: scale(2); /* Opera */
+        transform: scale(2);
+        padding: 10px;
+      }
+    }
+  }
+}
+#gform_wrapper_10 #field_10_8 .gfield_label,
+#gform_wrapper_10 #field_10_10 .gfield_label {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+}
+#gform_wrapper_10 #field_10_8 .gfield_checkbox label,
+#gform_wrapper_10 #field_10_10 .gfield_checkbox label {
+  font-family: 'Questrial', sans-serif;
+  margin-top: 0.3rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  color: white;
+}
+.gform_wrapper .validation_message {
+  color: #790000;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: white !important;
+}

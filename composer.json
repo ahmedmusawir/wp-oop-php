@@ -1,0 +1,22 @@
+{
+    "name": "user/cyberize-app-dev",
+    "description": "WordPress Test",
+    "require": {
+        "ramsey/uuid": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "CyberizeAppDev\\": "_classes/"
+        }
+
+    },
+    "authors": [
+        {
+            "name": "Ahmed Musawir",
+            "email": "ahmed.musawir@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "giacocorsiglia/wordpress-stubs": "^5.1"
+    }
+}
