@@ -111,33 +111,33 @@ require get_theme_file_path('/_functions/selflist/selflist-post-acf-to-rest.php'
 // SELFTLIST CREATE CATEGORIES
 // require get_theme_file_path('/_functions/selflist/ajax/test-ajax.php');
 // require get_theme_file_path('/_functions/selflist/selflist-create-categories.php');
-require get_theme_file_path('/_functions/selflist/ajax/main-cat-insert-ajax.php');
-require get_theme_file_path('/_functions/selflist/ajax/primo-cat-insert-ajax.php');
-require get_theme_file_path('/_functions/selflist/ajax/secondo-cat-insert-ajax.php');
-require get_theme_file_path('/_functions/selflist/ajax/terzo-cat-insert-ajax.php');
-require get_theme_file_path('/_functions/selflist/ajax/list-preview-ajax.php');
-require get_theme_file_path('/_functions/selflist/ajax/list-payment-and-publish-ajax.php');
+// require get_theme_file_path('/_functions/selflist/ajax/main-cat-insert-ajax.php');
+// require get_theme_file_path('/_functions/selflist/ajax/primo-cat-insert-ajax.php');
+// require get_theme_file_path('/_functions/selflist/ajax/secondo-cat-insert-ajax.php');
+// require get_theme_file_path('/_functions/selflist/ajax/terzo-cat-insert-ajax.php');
+// require get_theme_file_path('/_functions/selflist/ajax/list-preview-ajax.php');
+// require get_theme_file_path('/_functions/selflist/ajax/list-payment-and-publish-ajax.php');
 // SELFLIST CUSTOM TAXONOMY & CATEGORIES
-require get_theme_file_path('/_functions/selflist/taxonomy/selflist-create-taxonomy.php');
-require get_theme_file_path('/_functions/selflist/taxonomy/selflist-cat-list-w-links.php');
-require get_theme_file_path('/_functions/selflist/taxonomy/selflist-cat-list-wo-links.php');
+// require get_theme_file_path('/_functions/selflist/taxonomy/selflist-create-taxonomy.php');
+// require get_theme_file_path('/_functions/selflist/taxonomy/selflist-cat-list-w-links.php');
+// require get_theme_file_path('/_functions/selflist/taxonomy/selflist-cat-list-wo-links.php');
 // SELFLIST WITH WOOCOM
-require get_theme_file_path('/_functions/selflist/woocom/style-checkout-w-bootstrap.php');
-require get_theme_file_path('/_functions/selflist/woocom/add-points-to-member.php');
-require get_theme_file_path('/_functions/selflist/woocom/general-helpers.php');
+// require get_theme_file_path('/_functions/selflist/woocom/style-checkout-w-bootstrap.php');
+// require get_theme_file_path('/_functions/selflist/woocom/add-points-to-member.php');
+// require get_theme_file_path('/_functions/selflist/woocom/general-helpers.php');
 // SELFLIST WITH GRAVITY FORMS
-require get_theme_file_path('/_functions/selflist/gravity/add-signup-customer-points.php');
+// require get_theme_file_path('/_functions/selflist/gravity/add-signup-customer-points.php');
 
 // THIS UPDATES THE CATEGORY JSON FILE MANUALLY
 // require get_theme_file_path('/_functions/selflist/taxonomy/selflist-auto-update-cat-json.php');
 
 // DISPLAY STATES & CITIES IN CATEGORY.PHP PAGE TOP MENU
-require get_theme_file_path('/_functions/selflist/city_state/get_city_state.php');
-require get_theme_file_path('/_functions/selflist/rest/city-state-to-rest.php');
-require get_theme_file_path('/_functions/selflist/ajax/city-state-filter-ajax.php');
-require get_theme_file_path('/_functions/selflist/ajax/city-insert-ajax.php');
+// require get_theme_file_path('/_functions/selflist/city_state/get_city_state.php');
+// require get_theme_file_path('/_functions/selflist/rest/city-state-to-rest.php');
+// require get_theme_file_path('/_functions/selflist/ajax/city-state-filter-ajax.php');
+// require get_theme_file_path('/_functions/selflist/ajax/city-insert-ajax.php');
 // MAIN LIST INSERT: HAD TO BE RE-WRITTEN DUE TO TAX_INPUT NOT WORKING. USING PHP NOW INSTEAD OF REST
-require get_theme_file_path('/_functions/selflist/ajax/list-insert-ajax.php');
+// require get_theme_file_path('/_functions/selflist/ajax/list-insert-ajax.php');
 
 // FILTERS FOR ACF TO REST PLUGIN ... DON'T NEED THAT PLUGIN
 // Enable the option show in rest
@@ -187,3 +187,14 @@ require __DIR__ . '\vendor\autoload.php';
 
 // $cta_to_loop_end = new CyberizeAppDev\Test\FilterContent('CTA at Loop End', 'bg-secondary text-light');
 // $cta_to_loop_end->add_cta_at_loop_end();
+
+// use CyberizeAppDev\Utils\ShowObjects;
+use CyberizeAppDev\WooCom\HookTest;
+
+// $woo_hook_one = new HookTest('Hook: woocommerce_checkout_billing', 'bg-warning', 187);
+// $woo_hook_one->checkWooHookOne();
+
+$woo_hook_two = new HookTest('Hook: woocommerce_before_checkout_form', 'bg-info text-light', 187);
+$product_obj  = $woo_hook_two->checkWooHookTwo();
+
+// ShowObjects::show($product_obj);

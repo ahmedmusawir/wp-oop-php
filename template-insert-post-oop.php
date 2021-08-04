@@ -39,6 +39,7 @@
   // $post_content = 'No Detail Given';
  }
 
+ use CyberizeAppDev\Show\ShowObjects;
  use CyberizeAppDev\SupportDesk\PostInsert;
 
 ?>
@@ -48,6 +49,7 @@
   <header id="header-test" class="site-header container py-5 text-center">
 
     <h1 class="text-capitalize">insert an oop ticket</h1>
+    <h4>Need to add Name, Email & Phone with ACF and validate with RegEx</h4>
     <hr class="bg-light">
 
   </header><!-- #masthead -->
@@ -80,7 +82,7 @@
 
    $notice = $ticket->insertToDb();
 
-   //  ShowObjects::show($notice);
+   ShowObjects::show($notice);
 
    $ticket->showMessage($notice);
 
