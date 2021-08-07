@@ -139,6 +139,9 @@ require get_theme_file_path('/_functions/selflist/selflist-post-acf-to-rest.php'
 // MAIN LIST INSERT: HAD TO BE RE-WRITTEN DUE TO TAX_INPUT NOT WORKING. USING PHP NOW INSTEAD OF REST
 // require get_theme_file_path('/_functions/selflist/ajax/list-insert-ajax.php');
 
+// APP MANAGER PAGE RELATED
+require get_theme_file_path('/_functions/selflist/app-manager/menu-page.php');
+
 // FILTERS FOR ACF TO REST PLUGIN ... DON'T NEED THAT PLUGIN
 // Enable the option show in rest
 // add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );
