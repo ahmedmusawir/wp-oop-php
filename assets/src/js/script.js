@@ -125,7 +125,7 @@ class App {
   }
 
   runTestCode = () => {
-    new IndexedDbTest();
+    // new IndexedDbTest();
     // new InsertPost();
     // new TestGetJson();
     // new FormValdationTest();

@@ -39,11 +39,18 @@ function enqueue_scripts()
 
  wp_enqueue_script(
   'selflist-app-manager',
-  get_template_directory_uri() . '/assets/dist/js/AppManagerSettings.min.js',
-  '',
-  '',
-  true
+  get_template_directory_uri() . '/assets/dist/js/script-admin.min.js',
+  ['jquery'],
+  '1.0',
+  false
  );
+
+ wp_localize_script('selflist-app-manager', 'selflistAdminData', array(
+  'root_url' => get_site_url(),
+  'ajax_url' => admin_url('admin-ajax.php'),
+  'nonce'    => wp_create_nonce('wp_rest')
+ ));
+
 }
 
 add_action('admin_enqueue_scripts', 'enqueue_scripts');

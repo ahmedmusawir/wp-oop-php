@@ -141,6 +141,8 @@ require get_theme_file_path('/_functions/selflist/selflist-post-acf-to-rest.php'
 
 // APP MANAGER PAGE RELATED
 require get_theme_file_path('/_functions/selflist/app-manager/menu-page.php');
+require get_theme_file_path('/_functions/selflist/ajax/admin-list-users-ajax.php');
+require get_theme_file_path('/_functions/selflist/ajax/admin-users-points-add-ajax.php');
 
 // FILTERS FOR ACF TO REST PLUGIN ... DON'T NEED THAT PLUGIN
 // Enable the option show in rest
