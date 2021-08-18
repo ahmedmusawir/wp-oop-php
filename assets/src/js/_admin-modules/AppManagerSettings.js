@@ -14,7 +14,7 @@ class AppManagerSettings extends AdminAjaxEvents {
   }
 
   init = () => {
-    console.log('ES6 From WPAdmin ...');
+    // console.log('ES6 From WPAdmin ...');
     // alert(this.button);
   };
 

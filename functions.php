@@ -194,12 +194,59 @@ require __DIR__ . '\vendor\autoload.php';
 // $cta_to_loop_end->add_cta_at_loop_end();
 
 // use CyberizeAppDev\Utils\ShowObjects;
-use CyberizeAppDev\WooCom\HookTest;
 
 // $woo_hook_one = new HookTest('Hook: woocommerce_checkout_billing', 'bg-warning', 187);
 // $woo_hook_one->checkWooHookOne();
 
-$woo_hook_two = new HookTest('Hook: woocommerce_before_checkout_form', 'bg-info text-light', 187);
-$product_obj  = $woo_hook_two->checkWooHookTwo();
+// $woo_hook_two = new HookTest('Hook: woocommerce_before_checkout_form', 'bg-info text-light', 187);
+// $product_obj  = $woo_hook_two->checkWooHookTwo();
 
 // ShowObjects::show($product_obj);
+
+/*
+ * THRIVE AUTOMATOR STUFF TESTING
+ */
+use CyberizeAppDev\ThriveAuto\MakeTrigger;
+$thriveAuto = new MakeTrigger();
+
+thrive_automator_register_trigger($thriveAuto);
+
+/*
+ * Add Manage Options Capability to Editor Role
+ */
+function add_cap_to_editor()
+{
+ $editor = get_role('editor');
+ $editor->add_cap('manage_options');
+//  $editor->remove_cap('manage_options');
+
+};
+
+add_action('init', 'add_cap_to_editor');
+
+/**
+ * Removes some menus by page.
+ */
+function wpdocs_remove_menus()
+{
+
+ if (current_user_can('editor')) {
+//  remove_menu_page('index.php'); //Dashboard
+  remove_menu_page('jetpack'); //Jetpack*
+  //  remove_menu_page('edit.php'); //Posts
+  remove_menu_page('upload.php'); //Media
+  //  remove_menu_page('edit.php?post_type=page'); //Pages
+  remove_menu_page('edit-comments.php'); //Comments
+  remove_menu_page('themes.php'); //Appearance
+  remove_menu_page('plugins.php'); //Plugins
+  remove_menu_page('users.php'); //Users
+  remove_menu_page('tools.php'); //Tools
+  remove_menu_page('options-general.php'); //Settings
+  remove_menu_page('duplicator'); //Duplictor
+  remove_menu_page('edit.php?post_type=acf-field-group'); //ACF
+
+ }
+
+}
+
+add_action('admin_menu', 'wpdocs_remove_menus');

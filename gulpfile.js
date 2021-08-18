@@ -8,7 +8,6 @@ var rename = require('gulp-rename');
 var scss = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
-// var postcss = require('gulp-postcss');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
