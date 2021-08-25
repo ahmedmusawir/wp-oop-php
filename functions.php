@@ -118,7 +118,7 @@ require get_theme_file_path('/_functions/selflist/selflist-post-acf-to-rest.php'
 // require get_theme_file_path('/_functions/selflist/ajax/list-preview-ajax.php');
 // require get_theme_file_path('/_functions/selflist/ajax/list-payment-and-publish-ajax.php');
 // SELFLIST CUSTOM TAXONOMY & CATEGORIES
-// require get_theme_file_path('/_functions/selflist/taxonomy/selflist-create-taxonomy.php');
+require get_theme_file_path('/_functions/selflist/taxonomy/selflist-create-taxonomy.php');
 // require get_theme_file_path('/_functions/selflist/taxonomy/selflist-cat-list-w-links.php');
 // require get_theme_file_path('/_functions/selflist/taxonomy/selflist-cat-list-wo-links.php');
 // SELFLIST WITH WOOCOM
@@ -182,7 +182,7 @@ require __DIR__ . '\vendor\autoload.php';
 // global $content;
 
 // $filter_content = new CyberizeAppDev\Test\FilterContent('Cta with Content Filter', 'bg-warning');
-// $filter_content->filter_content();
+// $filter_content->filter_content($content);
 
 // $cta_to_top = new CyberizeAppDev\Test\FilterContent('CTA at Loop Start', 'bg-info');
 // $cta_to_top->add_cta_at_loop_start();
@@ -202,14 +202,6 @@ require __DIR__ . '\vendor\autoload.php';
 // $product_obj  = $woo_hook_two->checkWooHookTwo();
 
 // ShowObjects::show($product_obj);
-
-/*
- * THRIVE AUTOMATOR STUFF TESTING
- */
-use CyberizeAppDev\ThriveAuto\MakeTrigger;
-$thriveAuto = new MakeTrigger();
-
-thrive_automator_register_trigger($thriveAuto);
 
 /*
  * Add Manage Options Capability to Editor Role
@@ -250,3 +242,8 @@ function wpdocs_remove_menus()
 }
 
 add_action('admin_menu', 'wpdocs_remove_menus');
+
+/*
+ * THRIVE AUTOMATOR STUFF TESTING
+ */
+require get_theme_file_path('/_functions/thrive-automator/run-thrive-automator.php');

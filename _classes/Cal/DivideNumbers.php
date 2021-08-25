@@ -13,7 +13,11 @@ if (!class_exists('DivideNumbers')) {
 
   public function get_total()
   {
-   $total = $this->digit_one / $this->digit_two;
+   if ($this->digit_two != 0) {
+    $total = $this->digit_one / $this->digit_two;
+   } else {
+    $total = "Cannot divide by Zero!";
+   }
    return $total;
   }
  }

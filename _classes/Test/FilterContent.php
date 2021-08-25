@@ -17,14 +17,17 @@ class FilterContent
  {
 
   $this->cta_content = '<h4 class="card p-2 mb-5 ' . $bg_css_class . '">' . $cta_text . '</h4>';
-  add_filter('the_content', [$this, 'filter_content']);
-  // add_action('loop_start', [$this, 'add_cta_at_loop_start']);
-  // add_action('loop_end', [$this, 'add_cta_at_loop_end']);
   // add_action('wp_footer', [$this, 'add_cta_at_footer']);
 
  }
 
  public function filter_content($content)
+ {
+  add_filter('the_content', [$this, 'show_filter_content']);
+
+ }
+
+ public function show_filter_content($content)
  {
   echo $this->cta_content;
   return $content . $this->cta_content;
@@ -38,10 +41,20 @@ class FilterContent
 
  public function add_cta_at_loop_start()
  {
+  add_action('loop_start', [$this, 'show_cta_at_loop_start']);
+ }
+
+ public function show_cta_at_loop_start()
+ {
   echo $this->cta_content;
  }
 
  public function add_cta_at_loop_end()
+ {
+  add_action('loop_end', [$this, 'show_cta_at_loop_end']);
+ }
+
+ public function show_cta_at_loop_end()
  {
   echo $this->cta_content;
  }

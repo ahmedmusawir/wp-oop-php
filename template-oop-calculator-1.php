@@ -30,11 +30,32 @@
   echo "<br>Digit Two: $digit_two";
   echo "<br>Math: $math_op";
 
-  $calculator = new CyberizeAppDev\Cal\Calculator($digit_one, $digit_two, $math_op);
-  $add        = new CyberizeAppDev\Cal\AddNumbers($digit_one, $digit_two, $math_op);
-  $minus      = new CyberizeAppDev\Cal\MinusNumbers($digit_one, $digit_two, $math_op);
-  $multiply   = new CyberizeAppDev\Cal\MultiplyNumbers($digit_one, $digit_two, $math_op);
-  $divide     = new CyberizeAppDev\Cal\DivideNumbers($digit_one, $digit_two, $math_op);
+  // if (isset($_POST['digit_one'])) {
+  //  $digit_one = $_POST['digit_one'];
+  // }
+  // if (empty($_POST['digit_one'])) {
+  //  $digit_one = 0;
+  // }
+
+  // if (isset($_POST['digit_two'])) {
+  //  $digit_two = $_POST['digit_two'];
+  // }
+  // if (empty($_POST['digit_two'])) {
+  //  $digit_two = 0;
+  // }
+
+  // if (isset($_POST['math'])) {
+  //  $math_op = $_POST['math'];
+  // }
+  // if (empty($_POST['math'])) {
+  //  $math_op = 'plus';
+  // }
+
+  // $calculator = new CyberizeAppDev\Cal\Calculator($digit_one, $digit_two, $math_op);
+  // $add        = new CyberizeAppDev\Cal\AddNumbers($digit_one, $digit_two, $math_op);
+  // $minus      = new CyberizeAppDev\Cal\MinusNumbers($digit_one, $digit_two, $math_op);
+  // $multiply   = new CyberizeAppDev\Cal\MultiplyNumbers($digit_one, $digit_two, $math_op);
+  // $divide     = new CyberizeAppDev\Cal\DivideNumbers($digit_one, $digit_two, $math_op);
 
  }
 
@@ -60,39 +81,34 @@
 
     <?php if (isset($_POST['Submit'])): ?>
 
-    <div class="card bg-light mt-5">
+    <!-- <div class="card bg-light mt-5">
       <?php $calculator->display_number()?>
-    </div>
+    </div> -->
 
     <div class="card bg-light mt-5">
       <?php
 
-       switch ($math_op) {
-        case 'plus':
-         echo "<h3>TOTAL IS: " . $add->get_total() . "</h3>";
-         $add->show_operation();
+       //  switch ($math_op) {
+       //   case 'plus':
+       //    echo "<h3>TOTAL IS: " . $add->get_total() . "</h3>";
 
-         break;
-        case 'minus':
-         echo "<h3>TOTAL IS: " . $minus->get_total() . "</h3>";
-         $minus->show_operation();
+       //    break;
+       //   case 'minus':
+       //    echo "<h3>TOTAL IS: " . $minus->get_total() . "</h3>";
 
-         break;
-        case 'multiply':
-         echo "<h3>TOTAL IS: " . $multiply->get_total() . "</h3>";
-         $multiply->show_operation();
+       //    break;
+       //   case 'multiply':
+       //    echo "<h3>TOTAL IS: " . $multiply->get_total() . "</h3>";
 
-         break;
-        case 'divide':
-         echo "<h3>TOTAL IS: " . $divide->get_total() . "</h3>";
+       //    break;
+       //   case 'divide':
+       //    echo "<h3>TOTAL IS: " . $divide->get_total() . "</h3>";
 
-         $divide->show_operation();
+       //    break;
 
-         break;
-
-        default:
-         echo 'Error!';
-       }
+       //   default:
+       //    echo 'Error!';
+       //  }
 
       ?>
 

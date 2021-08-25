@@ -9,11 +9,9 @@ use Thrive\Automator\Items\Trigger;
 
 class MakeTrigger extends Trigger
 {
- public $cta_content;
 
  public function __construct()
  {
-  $this->cta_content = "This is Make Trigger Class";
  }
 
  public static function get_id(): string
@@ -38,7 +36,7 @@ class MakeTrigger extends Trigger
 
  public static function get_app_name(): string
  {
-  return 'Moose Wordpress';
+  return 'Wordpress';
  }
 
  public static function get_name(): string
