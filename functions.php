@@ -140,7 +140,7 @@ require get_theme_file_path('/_functions/selflist/taxonomy/selflist-create-taxon
 // require get_theme_file_path('/_functions/selflist/ajax/list-insert-ajax.php');
 
 // APP MANAGER PAGE RELATED
-require get_theme_file_path('/_functions/selflist/app-manager/menu-page.php');
+// require get_theme_file_path('/_functions/selflist/app-manager/menu-page.php');
 require get_theme_file_path('/_functions/selflist/ajax/admin-list-users-ajax.php');
 require get_theme_file_path('/_functions/selflist/ajax/admin-users-points-add-ajax.php');
 
@@ -246,4 +246,4 @@ add_action('admin_menu', 'wpdocs_remove_menus');
 /*
  * THRIVE AUTOMATOR STUFF TESTING
  */
-require get_theme_file_path('/_functions/thrive-automator/run-thrive-automator.php');
+// require get_theme_file_path('/_functions/thrive-automator/run-thrive-automator.php');

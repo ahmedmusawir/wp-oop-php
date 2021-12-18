@@ -20,6 +20,7 @@
   <header id="header-test" class="site-header container py-5 text-center">
 
     <h1>React App One</h1>
+    <h4>(from Cyberize Plugin Framework 3)</h4>
     <hr>
 
   </header><!-- #masthead -->
