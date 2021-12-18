@@ -84,12 +84,18 @@
   ],
   "dependencies": {
     "@popperjs/core": "^2.4.0",
+    "formik": "^2.2.9",
     "idb-keyval": "^5.0.5",
+    "node-sass": "^7.0.0",
     "popper": "^1.0.1",
     "popper.js": "^1.16.1",
     "react": "^16.9.0",
+    "react-bootstrap": "^2.0.3",
+    "react-datepicker": "^4.5.0",
     "react-dom": "^16.9.0",
+    "react-router-dom": "^5.3.0",
     "selectize": "^0.12.6",
-    "selectize.js": "^0.12.12"
+    "selectize.js": "^0.12.12",
+    "yup": "^0.32.11"
   }
 }
